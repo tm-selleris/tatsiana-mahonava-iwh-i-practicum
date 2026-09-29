@@ -27,5 +27,15 @@ To read the full directions, please go to the [practicum instructions](https://a
 ## Requirements
 
 - All work must be your own. During the grading process we will check the revision history. Submissions that do not meet this requirement will not be considered.
-- You must have at least two new routes in your index.js file and one new pug template for the homepage.
-- You must create a developer test account and link to it in your README.md file. Submissions that do not meet this requirement will not be considered.
+- You must have at least three routes in `index.js`: `GET /`, `GET /update-cobj`, and `POST /update-cobj`.
+- You must create two Pug templates: `views/homepage.pug` and `views/updates.pug`.
+- The custom object must have at least three properties, including the string property `Name`, and at least three records.
+- The custom object must be associated with contacts.
+- The README must link to the custom object list in your developer test account.
+- Never commit the private app access token. Keep it in a local `.env` file.
+
+## Run locally
+
+Create a local `.env` file with `HUBSPOT_ACCESS_TOKEN=your-private-app-token`, then run `npm install` and `node index.js`. Open `http://localhost:3000` in your browser.
+
+Run the automated route tests with `npm test`.

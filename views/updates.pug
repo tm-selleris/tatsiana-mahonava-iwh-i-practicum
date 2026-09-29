@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title= title
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet" href="/css/style.css")
+  body
+    main.page.form-wrapper
+      h1 Add a Video Game
+      form(action="/update-cobj" method="POST")
+        label(for="name") Name
+        input#name(type="text" name="name" required)
+
+        label(for="publisher") Publisher
+        input#publisher(type="text" name="publisher" required)
+
+        label(for="price") Price
+        input#price(type="number" name="price" min="0" step="0.01" required)
+
+        button(type="submit") Save
+
+      p.return-link
+        a(href="/") Return to the homepage
